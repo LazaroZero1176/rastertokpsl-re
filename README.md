@@ -13,6 +13,18 @@ The problem in the non ASCII encoding of the file names for printed files.
  - [ ] update main readme (add requirements and manual for buiding the driver)
  - [ ] improve CmakeLists (maybe not)
 
+# macOS (Apple Silicon and Intel)
+
+The original Kyocera filter for macOS is an Intel-only binary from 2013
+and depends on Rosetta 2, which Apple is removing. This project compiles
+natively instead.
+
+    ./macos/build.sh
+    sudo ./macos/install.sh
+
+Only the Xcode Command Line Tools are required -- no CMake, no Homebrew.
+See [macos/README.md](macos/README.md) for details and test results.
+
 # Requirements
 
 To build the project you need Cmake and GCC (I haven't tested that code with Clang and other compilers). Also you need CUPS and its (development) libraries. Below there is a list of package names required for buiulding in different systems.
